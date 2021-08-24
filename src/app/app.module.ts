@@ -7,13 +7,15 @@ import { SenderComponent } from './sender/sender.component';
 import { ReceiverComponent } from './receiver/receiver.component';
 import { FormsModule } from '@angular/forms';
 import { FormatDirective } from './directives/format.directive';
+import { MailingPipe } from './pipes/mailing.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SenderComponent,
     ReceiverComponent,
-    FormatDirective
+    FormatDirective,
+    MailingPipe
   ],
   imports: [
     BrowserModule,

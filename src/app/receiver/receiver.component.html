@@ -1,6 +1,15 @@
 <div class="card">
     <ul class="list-group list-group-flush">
-        <li class="list-group-item" *ngFor="let ls of chatsList">{{ls}} Hello</li>
+        <li class="list-group-item" *ngFor="let ls of chatsList">{{ls}}</li>
     
     </ul>
 </div>
+
+<div class="mt-4">
+    Mail To Us
+    <a href="{{'kumarsehdev600@gmail.com' | mailing:'flag':'mailto://'}}">kumarsehdev600@gmail.com</a>
+    <br>
+    Make A Call
+     <a href="{{'7310731153' | mailing:'flag2':'tel://'}}">7310731153</a>
+</div>
+
