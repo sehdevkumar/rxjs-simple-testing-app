@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { SenderComponent } from './sender/sender.component';
 import { ReceiverComponent } from './receiver/receiver.component';
 import { FormsModule } from '@angular/forms';
+import { FormatDirective } from './directives/format.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SenderComponent,
-    ReceiverComponent
+    ReceiverComponent,
+    FormatDirective
   ],
   imports: [
     BrowserModule,

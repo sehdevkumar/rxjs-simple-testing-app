@@ -1,26 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject} from 'rxjs';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ChatService {
-   
-  subject = new Subject()
-
-  constructor() { }
   
-   messages:string[] = []
 
+  messages: string[] = [];
 
-  sendMessage(msg:any){
+  subjectBehave = new BehaviorSubject<string[]>(this.messages);
 
-       this.messages.push(msg)
-       this.subject.next(this.messages)
+  constructor() {}
+
+  sendMessage(msg: any) {
+    this.messages.push(msg);
+    this.subjectBehave.next(this.messages)
   }
 
-  getMessage(){
-     return this.subject.asObservable()
+  getMessage() {
+    return this.subjectBehave.asObservable();
   }
 }

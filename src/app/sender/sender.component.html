@@ -2,8 +2,8 @@
 <div class="card">
      <div class="card-body">
           <form>
-              <input type="text" class="form-control"
-              placeholder="type message..." [(ngModel)]="message" name="message"/>
+              <input type="text" class="form-control" 
+              placeholder="type message..." [(ngModel)]="message" name="message" value="message" appFormat />
               <button type="button" class="btn btn-info form-control mt-2" (click)="setData()"
               [disabled]="message===''">Send</button>
           </form>
